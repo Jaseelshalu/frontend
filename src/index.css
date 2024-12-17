@@ -1,0 +1,52 @@
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  @apply mx-auto px-4 w-full box-border max-w-screen-xl; /* For large screens */
+  @apply pl-20; /* For large screens */
+}
+
+@media (max-width: 992px) {
+  .container {
+    @apply max-w-screen-lg; /* For medium screens */
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    @apply max-w-screen-md; /* For small screens */
+  @apply pl-3; /* For large screens */
+
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    @apply max-w-full px-2; /* For extra small screens */
+  }
+}
+
+@layer components {
+  .h1 {
+    @apply text-[clamp(35px,4vw,48px)] font-bold;
+  }
+  .h2 {
+    @apply text-[clamp(24px,4vw,28px)] font-semibold;
+  }
+  .p {
+    @apply text-[clamp(16px,4vw,20px)];
+  }
+  .p-small {
+    @apply text-[clamp(12px,4vw,16px)];
+  }
+  .p-extra-small {
+    @apply text-[clamp(10px,4vw,14px)];
+  }
+  .p-center {
+    @apply text-center;
+  }
+}
+
